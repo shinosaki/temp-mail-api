@@ -1,0 +1,40 @@
+{
+  "name": "temp-mail.org",
+  "version": "1.0.0",
+  "description": "Temp-Mail.org API for JavaScript (with Fetch API)",
+
+  "type": "module",
+  "files": ["dist"],
+  "main": "./dist/cjs.js",
+  "module": "./dist/esm.js",
+
+  "exports": {
+    ".": {
+      "import": "./dist/esm.js",
+      "require": "./dist/cjs.js"
+    }
+  },
+
+  "scripts": {
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "esbuild --outfile=./dist/cjs.js --format=cjs ./index.js",
+    "build:esm": "esbuild --outfile=./dist/esm.js ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shinosaki/temp-mail-api.git"
+  },
+  "keywords": [
+    "temp-mail",
+    "temp",
+    "mail",
+    "api",
+    "fetch"
+  ],
+  "author": "Shinosaki",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shinosaki/temp-mail-api/issues"
+  },
+  "homepage": "https://github.com/shinosaki/temp-mail-api#readme"
+}
